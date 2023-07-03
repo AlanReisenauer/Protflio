@@ -1,0 +1,47 @@
+#------------------------------------
+#  Debugger Input Script
+#------------------------------------
+echo \n\n
+break last
+run
+set pagination off
+set logging file a4out.txt
+set logging overwrite
+set logging on
+set prompt
+echo ------------------------------------ \n
+echo display variables \n
+echo \n
+echo Data Set\n
+x/100uw &lst
+echo \nlist length:\t
+x/uw &length
+echo \n
+echo list min:\t
+x/uw &lstMin
+echo list est med:\t
+x/uw &estMed
+echo list max:\t
+x/uw &lstMax
+echo list sum:\t
+x/uw &lstSum
+echo list ave:\t
+x/uw &lstAve
+echo \n
+echo odd count:\t
+x/uw &oddCnt
+echo odd sum:\t
+x/uw &oddSum
+echo odd ave:\t
+x/uw &oddAve
+echo \n
+echo nine count:\t
+x/uw &nineCnt
+echo nine sum:\t
+x/uw &nineSum
+echo nine ave:\t
+x/uw &nineAve
+echo \n \n
+set logging off
+quit
+
